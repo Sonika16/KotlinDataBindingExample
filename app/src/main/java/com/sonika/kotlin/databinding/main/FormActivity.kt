@@ -12,7 +12,8 @@ class FormActivity : AppCompatActivity() {
 
     private val formDataModel: FormModel = FormModel("Sonika",
             "connect.ssonika@gmail.com","950, Harrington avenue NE",
-            1234567890);
+            1234567890)
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -20,13 +21,13 @@ class FormActivity : AppCompatActivity() {
         val binding: ActivityFormBinding = DataBindingUtil.setContentView(this, R.layout.activity_form)
 
         binding.setVariable(BR.form, formDataModel)
-        binding.setVariable(BR.activity, this);
+        binding.setVariable(BR.activity, this)
         binding.executePendingBindings()
 
     }
 
     fun backButtonClick(){
-       finish();
+       finish()
     }
 
     fun nextButtonClick(){
