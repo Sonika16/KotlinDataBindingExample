@@ -24,7 +24,7 @@ class FormActivity : AppCompatActivity() {
         binding.form = formDataModel
 //        binding.setVariable(BR.form, formDataModel)
 //        binding.setVariable(BR.activity, this)
-        binding.executePendingBindings()
+//        binding.executePendingBindings()
 
     }
 
