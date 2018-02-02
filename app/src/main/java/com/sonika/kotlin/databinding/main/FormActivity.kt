@@ -3,6 +3,7 @@ package com.sonika.kotlin.databinding.main
 import android.databinding.DataBindingUtil
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
+import android.view.View
 import android.widget.Toast
 import com.sonika.kotlin.databinding.BR
 import com.sonika.kotlin.databinding.R
@@ -20,17 +21,18 @@ class FormActivity : AppCompatActivity() {
 
         val binding: ActivityFormBinding = DataBindingUtil.setContentView(this, R.layout.activity_form)
 
-        binding.setVariable(BR.form, formDataModel)
-        binding.setVariable(BR.activity, this)
+        binding.form = formDataModel
+//        binding.setVariable(BR.form, formDataModel)
+//        binding.setVariable(BR.activity, this)
         binding.executePendingBindings()
 
     }
 
-    fun backButtonClick(){
+    fun backButtonClick(view: View){
        finish()
     }
 
-    fun nextButtonClick(){
+    fun nextButtonClick(view: View){
         Toast.makeText(this, "This button is under implementation", Toast.LENGTH_SHORT).show()
     }
 

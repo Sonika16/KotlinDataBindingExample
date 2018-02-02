@@ -9,9 +9,9 @@
             name="form"
             type="com.sonika.kotlin.databinding.main.FormModel"/>
 
-        <variable
+        <!--<variable
             name="activity"
-            type="com.sonika.kotlin.databinding.main.FormActivity"/>
+            type="com.sonika.kotlin.databinding.main.FormActivity"/>-->
 
     </data>
 
@@ -157,7 +157,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         android:text="@string/back"
         android:layout_marginBottom="20dp"
-        android:onClick="@{()->activity.backButtonClick()}"
+        android:onClick="backButtonClick"
         app:layout_constraintHorizontal_chainStyle="spread" />
 
     <Button
@@ -167,7 +167,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintLeft_toRightOf="@+id/backButton"
-        android:onClick="@{()->activity.nextButtonClick()}"
+        android:onClick="nextButtonClick"
         android:text="@string/next"
         android:layout_marginBottom="20dp"
         />
