@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="form"
+            type="com.sonika.kotlin.databinding.main.FormModel"/>
+
+        <variable
+            name="activity"
+            type="com.sonika.kotlin.databinding.main.FormActivity"/>
+
+    </data>
+
+<android.support.constraint.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <TextView
+        android:id="@+id/nameTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/name"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/nameEditText"
+        app:layout_constraintBaseline_toBaselineOf="@+id/nameEditText"
+        app:layout_constraintHorizontal_weight="2.5"
+        android:gravity="center|start"
+        android:textSize="16sp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"/>
+
+    <EditText
+        android:id="@+id/nameEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/name"
+        app:layout_constraintLeft_toRightOf="@+id/nameTextView"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintHorizontal_weight="7.5"
+        android:maxLines="1"
+        android:textSize="16sp"
+        android:text="@{form.name}"
+        android:layout_marginRight="10dp"
+        android:layout_marginEnd="10dp" />
+
+    <TextView
+        android:id="@+id/emailTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/email"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nameEditText"
+        app:layout_constraintRight_toLeftOf="@+id/emailEditText"
+        app:layout_constraintBaseline_toBaselineOf="@+id/emailEditText"
+        app:layout_constraintHorizontal_weight="2.5"
+        android:gravity="center|start"
+        android:textSize="16sp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp" />
+
+    <EditText
+        android:id="@+id/emailEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/email"
+        app:layout_constraintLeft_toRightOf="@+id/emailTextView"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nameEditText"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintHorizontal_weight="7.5"
+        android:inputType="textEmailAddress"
+        android:maxLines="1"
+        android:textSize="16sp"
+        android:text="@{form.email}"
+        android:layout_marginRight="10dp"
+        android:layout_marginEnd="10dp" />
+
+    <TextView
+        android:id="@+id/addressTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/address"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/addressEditText"
+        app:layout_constraintTop_toBottomOf="@+id/emailEditText"
+        app:layout_constraintBaseline_toBaselineOf="@+id/addressEditText"
+        app:layout_constraintHorizontal_weight="2.5"
+        android:gravity="center|start"
+        android:textSize="16sp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp" />
+
+    <EditText
+        android:id="@+id/addressEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/address"
+        app:layout_constraintLeft_toRightOf="@+id/addressTextView"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/emailEditText"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintHorizontal_weight="7.5"
+        android:maxLines="1"
+        android:text="@{form.address}"
+        android:textSize="16sp"
+        android:layout_marginRight="10dp"
+        android:layout_marginEnd="10dp" />
+
+    <TextView
+        android:id="@+id/phoneNumTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/phone_number"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/phoneNumEditText"
+        app:layout_constraintTop_toBottomOf="@+id/addressEditText"
+        app:layout_constraintBaseline_toBaselineOf="@+id/phoneNumEditText"
+        app:layout_constraintHorizontal_weight="2.5"
+        android:gravity="center|start"
+        android:textSize="16sp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp" />
+
+    <EditText
+        android:id="@+id/phoneNumEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/phone_number"
+        app:layout_constraintLeft_toRightOf="@+id/phoneNumTextView"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addressEditText"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintHorizontal_weight="7.5"
+        android:inputType="phone"
+        android:maxLines="1"
+        android:textSize="16sp"
+        android:text="@{String.valueOf(form.phoneNumber)}"
+        android:layout_marginRight="10dp"
+        android:layout_marginEnd="10dp" />
+
+    <Button
+        android:id="@+id/backButton"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toLeftOf="@+id/nextButton"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:text="@string/back"
+        android:layout_marginBottom="20dp"
+        android:onClick="@{()->activity.backButtonClick()}"
+        app:layout_constraintHorizontal_chainStyle="spread" />
+
+    <Button
+        android:id="@+id/nextButton"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/backButton"
+        android:onClick="@{()->activity.nextButtonClick()}"
+        android:text="@string/next"
+        android:layout_marginBottom="20dp"
+        />
+
+</android.support.constraint.ConstraintLayout>
+
+</layout>

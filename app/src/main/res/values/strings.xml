@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">KotlinDataBindingExample</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="name">Name</string>
+    <string name="email">Email</string>
+    <string name="address">Address</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="back">Back</string>
+    <string name="next">Next</string>
+</resources>
