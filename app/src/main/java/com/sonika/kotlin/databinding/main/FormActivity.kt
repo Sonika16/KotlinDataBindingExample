@@ -11,8 +11,8 @@ import com.sonika.kotlin.databinding.databinding.ActivityFormBinding
 
 class FormActivity : AppCompatActivity() {
 
-    private val formDataModel: FormModel = FormModel("Sonika",
-            "connect.ssonika@gmail.com","950, Harrington avenue NE",
+    private val formDataModel: FormModel = FormModel("Test",
+            "test@gmail.com","xyz",
             1234567890)
 
 
